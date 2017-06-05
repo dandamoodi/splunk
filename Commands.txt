@@ -1,0 +1,29 @@
+# Search Host
+host="Host-name"
+
+# Search Host with event code 100
+host="Host-name"| search EventCode=100
+
+# Show  sourcenames starting with Bonjour or event code 100
+host="Host-name"| search EventCode=100 | search SourceName=Bonjour*
+
+# Search Host by removing duplicates
+host="Host-name"| dedup EventCode
+
+# Show first 10 results
+host="Host-name" | head 10
+
+# Show last 10 results
+host="Host-name" | tail 10
+
+# Reverse result order
+host="Host-name" | reverse
+
+# Sort in user in ascending order
+host="Host-name" | sort user
+
+# Sort in user in descending order
+host="Host-name" | sort -user
+
+#show top 10 events
+host="Host-name" | top 10 EventCode
