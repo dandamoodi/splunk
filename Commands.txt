@@ -25,5 +25,5 @@ host="Host-name" | sort user
 # Sort in user in descending order
 host="Host-name" | sort -user
 
-#show top 10 events
+# Show top 10 events
 host="Host-name" | top 10 EventCode
